@@ -83,6 +83,7 @@ body{
   justify-content: center;
   align-items: center;
   overflow: hidden;
+
 }
 
 .content-wall{
@@ -93,7 +94,8 @@ body{
   justify-content: center;
   background: #001421;
   z-index: 0;
-  transition: all 1s ease-in-out;
+  transition: all 1.5s ease-in-out;
+
 }
 
 h1:hover{
@@ -150,7 +152,7 @@ span::after{
 
 #menu-toggle:checked + .content .content-wall{
   opacity: 0.1;
-  transition: all 1s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 #menu-toggle:checked + .content .menu-toggler span{
@@ -168,9 +170,15 @@ span::after{
   transform: rotate(-45deg);
 }
 
-#menu-toggle:checked + .content .container{
-  transform: translateY(0);
-  transition: all 1s cubic-bezier(0, 0, 0.2, 1);
+#menu-toggle:checked + .content .container .row_1 .section_1,
+#menu-toggle:checked + .content .container .row_1 .section_2,
+#menu-toggle:checked + .content .container .row_1 .section_3,
+#menu-toggle:checked + .content .container .row_3 .section_7,
+#menu-toggle:checked + .content .container .row_3 .section_8,
+#menu-toggle:checked + .content .container .row_3 .section_9,
+#menu-toggle:checked + .content .container .row_2 .bigCircle{
+  transform: scale(1);
+  transition: all 1s cubic-bezier(0, 1.45, 0.94, 0.98);
 }
 
 .menu-toggler:hover{
@@ -186,8 +194,6 @@ span::after{
   position: absolute;
   margin-top: -10px;
   z-index: 0;
-  transform: translateY(-600px);
-  transition: all 1s cubic-bezier(0, 0, 0.2, 1);
 }
 
 
@@ -225,7 +231,8 @@ span::after{
   z-index: 0;
   position: relative;
   overflow: hidden;
-  transition: all .3s ease-in-out;
+  transform: scale(0);
+  transition: all 0.5s cubic-bezier(0.35,-0.27, 0.79,-0.1);
 }
 
 
@@ -300,7 +307,9 @@ span::after{
   line-height: 1.5;
   background-image: url("../images/logo.png");
   background-size: contain;
+  transform: scale(0);
   overflow: hidden;
+  transition: all .5s cubic-bezier(0.35,-0.27, 0.79,-0.1);
 }
 
 .section_7{

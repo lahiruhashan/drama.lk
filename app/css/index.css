@@ -286,7 +286,7 @@ span::after{
 }
 
 .section_1 .image-bg{
-  background-image: url("../images/tutorials.png");
+  background-image: url("../resourses/tutorials.png");
 }
 
 .section_1 .text{
@@ -294,7 +294,7 @@ span::after{
 }
 
 .section_2 .image-bg{
-  background-image: url("../images/creativity.jpg");
+  background-image: url("../resourses/creativity.jpg");
 }
 
 .section_2 .text{
@@ -307,7 +307,7 @@ span::after{
 
 
 .section_3 .image-bg{
-  background-image: url("../images/sec1.jpg");
+  background-image: url("../resourses/sec1.jpg");
 }
 
 .section_3 .text{

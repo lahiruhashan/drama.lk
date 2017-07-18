@@ -39,3 +39,9 @@ background-image: url('../resourses/a.jpg');
   background-color: green;
   cursor: pointer;
 }
+
+.val_error
+{
+  margin-left: 20px;
+  color: #FF1F1F;
+}

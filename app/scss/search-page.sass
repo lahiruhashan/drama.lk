@@ -1,0 +1,486 @@
+@import ../fonts/fonts.css
+
+$main-color: #001421
+
+*
+  margin: 0
+  padding: 0
+
+
+body
+  height: auto
+  overflow-x: hidden
+  background-color: #192231
+
+.header
+  position: fixed
+  top: 0px
+  width: 100vw
+  height: 60px
+  z-index: 1
+  display: flex
+  align-items: center
+  background: #001421
+
+.wrap-left
+  height: auto
+  width: 60%
+  float: left
+  display: flex
+  align-items: center
+  //background-color: blue
+
+.logo
+  position: relative
+  height: 50px
+  width: 150px
+  display: flex
+  justify-content: center
+  align-items: center
+  float: left
+  color: White
+  font-family: 'Berkshire Swash', sans-serif
+  font-size: 30px
+  font-weight: 400
+  pointer-events: none
+  //background: red
+
+
+.search-box
+  height: 40px
+  width: calc((100vw - 180px) * 0.6)
+  margin-left: 10px
+  position: relative
+  left: 0px
+  float: left
+  border-radius: 3px
+  //background-color: red
+
+
+.search-text
+  height: 40px
+  width: calc(100% - 50px)
+  position: relative
+  float: left
+  border: none
+  font-size: 20px
+  font-family: "Fira Sans",sans-serif
+  background-color: whitesmoke
+  border-top-left-radius: 3px
+  border-bottom-left-radius: 3px
+
+
+.search-icon
+  height: 40px
+  width: 45px
+  position: relative
+  float: left
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: #fff
+  background-repeat: no-repeat
+  background-position: center
+  box-sizing: border-box
+  border: 1px solid #fefefe
+  border-top-right-radius: 3px
+  border-bottom-right-radius: 3px
+
+.search-result
+  position: absolute
+  height: auto
+  width: 673px
+  top: 50px
+  left: 142px
+  z-index: 1
+  background: red
+
+
+
+
+.button-wrap
+  height: auto
+  width: 40%
+  //background-color: green
+  position: relative
+  float: left
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  right: 5px
+  //border: 1px solid red
+
+.nev
+  height: 45px
+  width: 150px
+  position: relative
+  float: right
+  font-family: "Patua One",sans-serif
+  display: flex
+  align-items: center
+  //background-color: green
+
+  &:hover
+    cursor: pointer
+
+.advanced-search-icon
+  height: 45px
+  width: 30%
+  //background-color: red
+  float: left
+  background-image: url("../resourses/advanced-search-icon.png")
+  background-color: #001421
+  background-repeat: no-repeat
+  background-position: center
+  box-sizing: border-box
+  background-size: 30px
+
+
+.advanced-search-text
+  height: 45px
+  width: 70%
+  //background-color: blue;
+  float: left
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  text-align: center
+  font-size: 80%
+  padding:  0px 2px
+  box-sizing: border-box
+  color: white
+
+.profile
+  right: 5px
+
+.profile-icon
+  background-image: url("../resourses/profile-icon.png")
+  //background-color: red
+
+.profile-text
+  width: 45%
+  background: $main-color
+
+.drop-icon
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 15%
+  height: 45px
+  background: whitesmoke
+  float: left
+  font-size: 35px
+
+  &:hover
+    cursor: pointer
+
+.drop-menu
+  height: 100px
+  width: 150px
+  background-color: red
+  position: absolute
+  right: 25px
+  top: 55px
+  font-size: 15px
+  font-family: "Fira Sans" , sans-serif
+  color: whitesmoke
+  display: none
+  animation: drop ease-in-out forwards 300ms
+
+
+
+  .menu-1
+    height: 50%
+    width: 100%
+
+  .menu-2
+    height: 50%
+    width: 100%
+
+  .menu-1,
+  .menu-2
+    background: $main-color
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: all 0.3s ease-in-out
+
+    &:hover
+      cursor: pointer
+      background-color: rgba(50, 80, 100,0.9)
+
+      .signout
+        background-color: rgba(50, 80, 100,0.9)
+
+
+@keyframes drop
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+.signout
+  height: 50px
+  width: 150px
+  font-size: 15px
+  background-color: $main-color
+  color: whitesmoke
+  border: 0
+  transition: all 0.3s ease-in-out
+
+  &:hover
+    cursor: pointer
+
+#menu-toggle:checked ~ .menu-label .menu-toggler
+  transform: translateX(140px)
+  transition: all .5s ease-in-out
+
+
+#menu-toggle:checked ~ .menu-label .menu-toggler .line
+    background: transparent
+
+
+#menu-toggle:checked  ~ .menu-label .menu-toggler .line::before ,
+#menu-toggle:checked  ~ .menu-label .menu-toggler .line::after
+    transform: rotate(45deg)
+    transform-origin: center
+    top: 0
+
+
+#menu-toggle:checked  ~ .menu-label .menu-toggler .line::after
+    transform: rotate(-45deg)
+
+
+#menu-toggle:checked + .slide-menu
+  transform: translateX(0px)
+
+
+#menu-toggle:checked ~ .content
+  transform: translateX(220px)
+
+
+.menu-toggler
+  position: fixed
+  top: 70px
+  transition: all .5s ease-in-out
+
+
+.slide-menu
+  position: fixed
+  width: 220px
+  height: 100vh
+  background: #243742
+  left: 0px
+  top: 60px
+  transform: translateX(-220px)
+  display: flex
+  //z-index: 1;
+  align-items: flex-start
+  flex-direction: column
+  transition: transform 0.5s ease-in-out
+
+
+.logo-1 , .logo-2  , .logo-3  , .logo-4  , .logo-5  , .logo-6 , .logo-7
+  height: 28px
+  width: 28px
+  margin-right: 5px
+  background-image: url("../resourses/learn-icon.png")
+  background-size: cover
+
+
+.logo-2
+    background-image: url("../resourses/creativity-feed-icon.png")
+
+.logo-3
+    background-image: url("../resourses/news-icon.png")
+
+.logo-4
+    background-image: url("../resourses/venue-icon.png")
+
+.logo-5
+    background-image: url("../resourses/rent-icon.png")
+
+.logo-6
+    background-image: url("../resourses/new-trends-icon.png")
+
+.logo-7
+    background-image: url("../resourses/about-us-icon.png")
+
+
+.slide-menu .menu-item
+  margin: 3px 10px
+  width: calc(100% - 20px)
+  box-sizing: border-box
+  height: 50px
+  display: flex
+  align-items: center
+  padding: 0 20px 0 0
+  //background: green;
+  font-family: 'Fira Sans',sans-serif
+  font-size: 1.2em
+  font-weight: lighter
+  color: white
+  transition: all 0.2s ease-in-out
+
+
+.slide-menu .menu-item:first-child
+  margin-top: 60px
+
+
+.horizontal
+  border: rgb(50, 80, 100) 0.5px solid
+  width: 90%
+  align-self: center
+
+
+.slide-menu .menu-item:nth-child(6)
+  margin-bottom: 25px
+
+
+.slide-menu .menu-item:nth-child(8)
+  margin-top: 20px
+
+
+.slide-menu .menu-item:hover
+  background-color: rgba(50, 80, 100,0.9)
+  cursor: default
+
+
+.slide-menu .menu-item
+  &:hover
+    .logo-1,
+    .logo-2,
+    .logo-3,
+    .logo-4,
+    .logo-5,
+    .logo-6,
+    .logo-7
+      transform: rotateY(360deg)
+      transition: transform 0.6s ease-in-out
+
+
+.content
+    position: relative
+    margin-top: 80px
+    height: 1000px
+    width: 100%
+    z-index: 0
+    transition: all 0.5s ease-in-out
+
+.filter-results
+    height: calc(100vh - 100px)
+    width: 200px
+    position: fixed
+    float: left
+    margin-left: 10%
+    z-index: 1
+    border-right: 1px solid gray
+
+.top-title
+    height: 40px
+    width: 100%
+    color: whitesmoke
+    font-family: "Fira Sans" , sans-serif
+    display: flex
+    align-items: center
+    padding: 5px 10px
+
+.by-profession
+    height: auto
+    width: 100%
+    margin-top: 30px
+
+.sub-title
+    color: whitesmoke
+    font-size: 15px
+    font-family: "Fira Sans" , sans-serif
+    padding: 5px 10px
+    margin-bottom: 5px
+
+.select-profession
+    margin-left: 10px
+    margin-top: 10px
+
+.profession
+    font-family: "Fira Sans"
+    color: whitesmoke
+    
+.by-district
+    height: auto
+    width: 100%
+    margin-top: 10px
+
+.select-district
+    margin-left: 10px
+
+
+select
+  border: 1px solid #777
+  padding: .6rem 5rem .6rem .5rem
+  border-radius: 3px
+  color: whitesmoke
+  appearance: none
+  cursor: pointer
+  background: #192231
+
+  &:focus
+      border: 1px solid cyan
+
+  > option
+    font-size: 15px
+
+.district-combo
+  display: inline-block
+  position: relative
+
+  &:after
+    content: "\f13a"
+    font-family: "FontAwesome"
+    color: #777
+    position: absolute
+    right: .5rem
+    top: 10px
+    z-index: 0
+    pointer-events: none
+
+
+.result-set
+    height: 1000px
+    width: 600px
+    margin-left: 20px
+    background:  #192538
+    position: relative
+    left: calc(50% - 300px)
+    z-index: 1
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+    float: left
+
+@media (max-height: 550px)
+    .filter-results
+        position: relative
+        height: auto
+
+    .result-set
+        left: calc(((90% - 220px) * 0.5 ) - 430px ) 
+
+@media (max-width: 1250px)
+    .filter-results
+        width: 10%
+
+    .result-set
+        width: 40%
+
+    select
+        width: 80%
+
+@media (max-width: 950px)
+    .content
+        display: block
+        clear: both
+
+    .filter-results
+        clear: both
+
+    .result-set
+        clear: both

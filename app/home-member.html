@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/toggler.css">
+    <link rel="stylesheet" type="text/css" href="css/home-member.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="header">
+  <div class="wrap-left">
+    <div class="logo">Drama.lk</div>
+    <div class="search-box">
+        <input type="text" class="search-text">
+        <div class="search-icon"><i class="fa fa-search" style="font-size:20px" aria-hidden="true"></i></div>
+    </div>
+
+  </div>
+  <div class="search-result"></div>
+
+
+  <div class="button-wrap">
+    <!--
+    <div class="nev  work-upload">
+      <div class="advanced-search-icon work-upload-icon"></div>
+      <div class="advanced-search-text">Upload Workings</div>
+    </div> -->
+    <div class="nev  profile">
+      <div class="advanced-search-icon profile-icon"></div>
+      <div class="advanced-search-text profile-text">Profile</div>
+      <div class="drop-icon">▿</div>
+    </div>
+  </div>
+  <div class="drop-menu">
+    <div class="menu-1">Settings</div>
+    <div class="menu-2">
+      <form action="Logout" method="post">
+          <input class="signout" type="submit" value="Logout">
+      </form>
+    </div>
+  </div>
+
+</div>
+
+<input type="checkbox" id="menu-toggle" unchecked>
+<div class="slide-menu">
+
+    <div class="menu-item">
+        <div class="logo-1"></div>
+        Learn
+    </div>
+    <div class="menu-item">
+        <div class="logo-2"></div>
+        Creative Feed
+    </div>
+    <div class="menu-item">
+        <div class="logo-3"></div>
+        News
+    </div>
+    <div class="menu-item">
+        <div class="logo-4"></div>
+        Venues
+    </div>
+    <div class="menu-item">
+        <div class="logo-5"></div>
+        Rent
+    </div>
+    <div class="menu-item">
+        <div class="logo-6"></div>
+        New Trends
+    </div>
+    <hr class="horizontal">
+    <div class="menu-item">
+        <div class="logo-7"></div>
+        About Us
+    </div>
+
+</div>
+
+<label class="menu-label" for="menu-toggle">
+    <div class="menu-toggler">
+        <span class="line"></span>
+    </div>
+</label>
+<div class="creative-feed">
+    <div class="welcome-box">
+        <h1>Welcome ${user}</h1>
+    </div>
+
+</div>
+<div class="right-section">
+  <div class="read-more border">
+    <div class="title">Read More</div>
+    <div class="right-content"></div>
+  </div>
+  <div class="suggested border">
+    <div class="title">Suggested Tutorials</div>
+    <div class="right-content"></div>
+  </div>
+  <div class="followings">
+    <div class="title">Top Followings</div>
+    <div class="right-content"></div>
+  </div>
+</div>
+<div class="upload-work-window">
+  <div class="close">✕</div>
+  <form method="post" action="FileUpload" encType="multipart/form-data">
+  <div class="upload-content">
+      <div class="upload-region">
+          <input type="file" id="file-browse" name="file" value="Upload Image" class="browse">
+          <label class="upload-label" for="file-browse">
+            <figure>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg>
+            </figure>
+            <span class="choose-file-text">Choose a File</span>
+          </label>
+      </div>
+      <div class="text-region">
+          <input type="text" class="input-text" placeholder="  Describe Your Post..." >
+          
+      </div>
+  </div>
+  <div class="button-containter">
+      <input type="submit" class="upload-button" value="Upload"> </input>
+  </div>
+  </form>
+</div>
+<div class="work-upload-button">
+  <div class="upload-notify">Upload a Working</div>
+</div>
+
+
+
+<!--
+<div class="advanced-search-window">
+  <div class="top-wrapper">
+    <div class="advanced-search-box">
+      <input type="text" placeholder="  SEARCH" class="advanced-search-input">
+    </div>
+    <div class="advanced-search-button">
+      <button class="fa fa-search" style="font-size:30px;" aria-hidden="true"></button>
+    </div>
+  </div>
+  <div class="bottom-wrapper">
+    <div class="wrap">
+      <div class="label-text">Filter From District</div>
+      <div class="district-combo">
+        <select>
+          <option>Colombo</option>
+          <option value="burger">Burger</option>
+          <option value="pizza">Pizza</option>
+          <option value="burger">Noodles</option>
+          <option value="burger">Veg Wrap</option>
+          <option value="fries">French Fries</option>
+        </select>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="label-text">Filter From Profession</div>
+      <div class="district-combo proffesion-combo">
+        <select>
+          <option>Director</option>
+          <option value="burger">Burger</option>
+          <option value="pizza">Pizza</option>
+          <option value="burger">Noodles</option>
+          <option value="burger">Veg Wrap</option>
+          <option value="fries">French Fries</option>
+        </select>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+-->
+
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/home-member.js"></script>
+
+</body>
+</html>

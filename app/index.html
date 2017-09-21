@@ -1,90 +1,118 @@
+
 <!Doctype html>
 <head>
+
   <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" type="text/css" href="css/index-menu.css">
+  <link rel="stylesheet" type="text/css" href="css/toggler.css">
+
 </head>
 <body>
 
+<div class="pageWrap">
 
-  <input type="checkbox" id="sidebarToggler" unchecked>
+  <div class="pageContent" id="pageContent">
+    <div class="header">
+      <div class="logo" id="logo">Drama.lk</div>
+      <div class="signIn" id="signIn"><p class="skew">Sign In</p></div>
 
-
-
-  <div class="pageWrap">
-
-    <div class="pageContent">
-      <div class="header">
-        <div class="logo">Drama.lk</div>
-        <label for="sidebarToggler"><div class="signIn" id="signIn">Sign In</div></label>
-        <div class="signUp"><a href="registration.html"> Sign Up</a></div>
-
-      </div>
-      <input type="checkbox" id="menu-toggle" unchecked>
-      <div class="content">
-        <label for="menu-toggle">
-          <div class="menu-toggler">
-            <span></span>
-          </div>
-        </label>
-        <div class="content-wall">
-
-          <h1> The Platform <br> For <br> Sri Lankan Drama</h1>
-        </div>
-
-        <div class="container">
-          <div class="row_1">
-            <div class="section_1">
-              <div class="image-bg"></div>
-              <div class="text">Tutorials</div>
-            </div>
-            <div class="section_2">
-              <div class="image-bg"></div>
-              <div class="text">Creative Feed</div>
-            </div>
-            <div class="section_3">
-              <div class="image-bg"></div>
-              <div class="text">New Trends</div>
-            </div>
-          </div>
-          <div class="row_2">
-            <div class="bigCircle">
-            </div>
-          </div>
-          <div class="row_3">
-            <div class="section_7">
-              <div class="image-bg"></div>
-              <div class="text">News Feed</div>
-            </div>
-            <div class="section_8">
-              <div class="image-bg"></div>
-              <div class="text">Venue</div>
-            </div>
-            <div class="section_9">
-              <div class="image-bg"></div>
-              <div class="text">About Us</div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-    <div id="loginSection" class="loginSection">
-      <div class="loginWrapper">
-        <div class="headerWrapper">
-          <div class="imageTag">
-            <div class="image"></div>
-          </div>
-          <div class="title">Hey You !</div>
+    <input type="checkbox" id="menu-toggle" unchecked>
+    <div class="content">
+      <label class="menu-label" for="menu-toggle">
+        <div class="menu-toggler">
+          <span class="line"></span>
         </div>
-        <div class="loginDetail">
-          <div class="username">
-            <input type="email" class="usernameInput"name="" placeholder="Your email">
+      </label>
+      <div class="content-wall">
+        <div class="content-left">
+          <div class="strip">
+            <section class="quote">
+            <p >Let yourself live between</p>
+            <p> Reality and </p>
+            <p> Theater... </p>
+            </section>
+            <section class="welcome-text">
+            <p >Welcome to the Latest Drama Experience. </p>
+            </section>
+            <div class="signUp" id="signUp">Sign Up </div>
           </div>
-          <div class="password">
-            <input type="password" class="passwordInput" name="" placeholder="Your password">
+        </div>
+        <div class="content-right"></div>
+      </div>
+
+      <div class="container">
+        <div class="row_1">
+          <div class="section_1">
+            <div class="image-bg"></div>
+            <div class="text">Tutorials</div>
           </div>
-          <div class="loginButton">LOGIN</div>
+          <div class="section_2">
+            <div class="image-bg"></div>
+            <div class="text">Creative Feed</div>
+          </div>
+          <div class="section_3">
+            <div class="image-bg"></div>
+            <div class="text">New Trends</div>
+          </div>
+        </div>
+        <div class="row_2">
+          <div class="bigCircle">
+          </div>
+        </div>
+        <div class="row_3">
+          <div class="section_7">
+            <div class="image-bg"></div>
+            <div class="text">News Feed</div>
+          </div>
+          <div class="section_8">
+            <div class="image-bg"></div>
+            <div class="text">Venue</div>
+          </div>
+          <div class="section_9">
+            <div class="image-bg"></div>
+            <div class="text">About Us</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  <div id="loginSection" class="loginSection">
+    <div class="toggleWrapper">
+      <div class="closeButton" id="closeButton">✕</div>
+    </div>
+    <div class="loginWrapper">
+      <div class="headerWrapper">
+        <div class="imageTag">
+          <div class="image"></div>
+        </div>
+        <div class="title">Welcome Back !</div>
+      </div>
+      <form method="get" id="loginForm">
+        <div class="loginDetail">
+          <div class="username-wrap">
+            <div class="username">
+              <input type="email" class="usernameInput" id="username" name="username" placeholder="Your email">
+            </div>
+            <div class="username-notify" id="username-notify"><p class="text-invalid">Invalid Username</p></div>
+          </div>
+          <div class="password-wrap">
+            <div class="password">
+              <input type="password" class="passwordInput" name="password" placeholder="Your password">
+            </div>
+            <div class="password-notify" id="password-notify"><p class="text-invalid"> Invalid Password </p></div>
+          </div>
+
+          <input type="button" class="loginButton" id="loginButton" value="LOGIN">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
 </body>
 </html>
